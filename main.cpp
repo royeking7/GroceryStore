@@ -20,11 +20,11 @@ int main()
   cin>>input;
 
   if(input=='a'||input=='A')
-  {
-    if(numItems<5)
+  { 
+  cout<<"What is the item?\n";
+  cin>>newItems;
+    if(numItems<5) 
     {
-    cout<<"What is the item?\n";
-    cin>>newItems;
     list[numItems]=newItems;
     numItems++;
     }
