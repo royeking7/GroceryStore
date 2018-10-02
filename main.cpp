@@ -20,21 +20,27 @@ int main()
   cin>>input;
 
   if(input=='a'||input=='A')
-  { 
-  cout<<"What is the item?\n";
-  cin>>newItems;
-    if(numItems<5) 
-    {
-    list[numItems]=newItems;
-    numItems++;
-    }
+    { 
+    cout<<"What is the item?\n";
+    cin>>newItems;
+      if(numItems<5) 
+      {
+      list[numItems]=newItems;
+      numItems++;
+      } 
     else
-    {
-    cout<<"You'll need a bigger list!"<<endl;
+      {
+      cout<<"You'll need a bigger list!"<<endl;
+      }
     }
-  }
   } 
   while(input!='q'&&input!='Q');
   
+  cout<<"==ITEMS TO BUY=="<<endl;
+  for (int index=0; index<5; index++)  
+  {
+  cout<<index+1<<" "<<list[index]<<endl;
+  }
+
   return 0;
 }
